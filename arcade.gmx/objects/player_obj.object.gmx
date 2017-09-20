@@ -25,11 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xvel = 0
-yvel = 0
-decay = 1 
-maxvel = 20
-minvel = -20
+            <string>xvel = 0;
+yvel = 0;
+decay = 1;
+maxvel = 20;
+minvel = -20;
+xyvel = 0;
+xxvel = 0;
+yyvel = 0;
+totvel =0;
 </string>
           </argument>
         </arguments>
@@ -90,6 +94,10 @@ yvel -= .2;
 }
 x -= xvel;
 y -= yvel;
+xxvel = xvel * xvel;
+yyvel = yvel * yvel;
+xyvel = xxvel + yyvel
+totvel = sqrt(xyvel); 
 }
 //movement decay
 if decay = 1 {
@@ -209,6 +217,7 @@ yvel = -yvel
 
 draw_text (100,100,xvel)
 draw_text (150,100,yvel)
+draw_text (200,100,totvel)
 </string>
           </argument>
         </arguments>
