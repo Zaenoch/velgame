@@ -100,6 +100,14 @@ xyvel = xxvel + yyvel
 totvel = sqrt(xyvel); 
 }
 //movement decay
+if decay = 2 {
+    xvel *= .95;
+    yvel *= .95;
+if -.05 &gt; xvel &lt;.05{ 
+    xvel = 0}
+if -.05 &gt; yvel &lt;.05 { 
+    yvel = 0}
+}
 if decay = 1 {
     xvel *= .99;
     yvel *= .99;
@@ -107,6 +115,18 @@ if -.05 &gt; xvel &lt;.05{
     xvel = 0}
 if -.05 &gt; yvel &lt;.05 { 
     yvel = 0}
+}
+if place_meeting (x,y,frictionpad){
+decay = 2
+}
+else{
+decay = 0 
+if place_meeting(x,y,ice){
+decay = 0; 
+}
+else {
+decay = 1
+}
 }
 </string>
           </argument>
@@ -130,16 +150,16 @@ if -.05 &gt; yvel &lt;.05 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if xvel &lt;= 14 {
+            <string>if xvel &lt; 14 {
 draw_text (200,200,"hello");
 } 
-if yvel &lt;= 14 {
+if yvel &lt; 14 {
 draw_text (300,200,"hello");
 }
-if xvel &gt;= -14 {
+if xvel &gt; -14 {
 draw_text (400,200,"hello");
 } 
-if yvel &gt;= -14 {
+if yvel &gt; -14 {
 draw_text (500,200,"hello");
 }
 

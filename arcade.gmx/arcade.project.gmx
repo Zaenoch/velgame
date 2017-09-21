@@ -10,6 +10,8 @@
     <sprite>sprites\player_spr</sprite>
     <sprite>sprites\spinner_spr</sprite>
     <sprite>sprites\goal_spr</sprite>
+    <sprite>sprites\frictionpad_spr</sprite>
+    <sprite>sprites\ice_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -18,6 +20,8 @@
     <object>objects\player_obj</object>
     <object>objects\spinner</object>
     <object>objects\goal</object>
+    <object>objects\frictionpad</object>
+    <object>objects\ice</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
