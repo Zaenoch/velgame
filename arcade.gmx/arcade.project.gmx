@@ -6,12 +6,14 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\block</sprite>
+    <sprite>sprites\block_spr</sprite>
     <sprite>sprites\player_spr</sprite>
     <sprite>sprites\spinner_spr</sprite>
     <sprite>sprites\goal_spr</sprite>
     <sprite>sprites\frictionpad_spr</sprite>
     <sprite>sprites\ice_spr</sprite>
+    <sprite>sprites\turrentbase_spr</sprite>
+    <sprite>sprites\turrentgun_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,6 +24,7 @@
     <object>objects\goal</object>
     <object>objects\frictionpad</object>
     <object>objects\ice</object>
+    <object>objects\turrent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
