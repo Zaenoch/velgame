@@ -14,6 +14,7 @@
     <sprite>sprites\ice_spr</sprite>
     <sprite>sprites\turrentbase_spr</sprite>
     <sprite>sprites\turrentgun_spr</sprite>
+    <sprite>sprites\bullet_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,6 +26,7 @@
     <object>objects\frictionpad</object>
     <object>objects\ice</object>
     <object>objects\turrent</object>
+    <object>objects\bullet_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
