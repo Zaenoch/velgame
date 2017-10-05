@@ -34,8 +34,7 @@ xyvel = 0;
 xxvel = 0;
 yyvel = 0;
  global.totvel =0;
- xbounce = true
- ybounce = true
+
 </string>
           </argument>
         </arguments>
@@ -64,35 +63,35 @@ y = y;
 
 // Min-Max speeds
 if xvel &gt; maxvel {
-    xvel = 20
+    xvel = 15
 }
 if xvel &lt; minvel {
-    xvel = -20
+    xvel = -15
 }
 if yvel &gt; maxvel {
-    yvel = 20
+    yvel = 15
 }
 if yvel &lt; minvel {
-    yvel = -20
+    yvel = -15
 }
 //Controls and MATH
 {
 if (keyboard_check(ord("A")))
 {
-xvel += .2;
+xvel += .15;
 }
 
 if (keyboard_check(ord("D")))
 {
-xvel -= .2;
+xvel -= .15;
 }
 if (keyboard_check(ord("W")))
 { 
-yvel += .2;
+yvel += .15;
 }
 if (keyboard_check(ord("S")))
 {
-yvel -= .2;
+yvel -= .15;
 }
 x -= xvel;
 y -= yvel;
@@ -152,49 +151,17 @@ else {
           <argument>
             <kind>1</kind>
             <string>///colisions 
-// X
-if (place_meeting(x + (sign(xvel)),y,wall))&amp;&amp; xbounce = true{
-    xvel = xvel * -1;
-        xbounce = false     
-}
+
 // y
-if (place_meeting (x,(y + sign(yvel)),wall)) &amp;&amp; ybounce = true{
-    yvel = yvel * -1;
-        ybounce = false    
+if (place_meeting (x + xvel,y,wall)){
+y += yvel * 3;
+yvel = yvel * -1;
 }
 
-if (place_meeting (x,y,wall)){
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Bounce logic
-
-if xxvel &gt; yyvel{
-    xbounce = true;
-    ybounce = false;
-} 
-if yyvel &gt; xxvel{
-    xbounce = false;
-    ybounce = true; 
+// X
+if (place_meeting(x,y + yvel,wall)){
+x += xvel * 3;
+xvel = xvel * -1;
 }
 
 </string>
